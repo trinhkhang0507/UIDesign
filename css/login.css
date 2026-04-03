@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* căn giữa form */
+
+.login-box{
+    width:340px;
+    margin:80px auto;
+}
+
+/* input */
+
+.login-box input[type="text"],
+.login-box input[type="password"]{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:#e5b892;
+    font-size:14px;
+    outline:none;
+}
+
+/* password icon */
+
+.password-box{
+    position:relative;
+}
+
+.password-box i{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#333;
+}
+
+/* option */
+
+.option{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.option label{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.option input{
+    accent-color:#ff6a00;
+    color: white;
+}
+
+.option a{
+    text-decoration:none;
+    color:#777;
+}
+
+/* login button */
+
+.login-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#ff6a00;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-bottom:20px;
+    transition:0.2s;
+}
+
+.login-btn:hover{
+    background:#e85f00;
+}
+
+/* divider */
+
+.divider{
+    text-align:center;
+    font-size:13px;
+    color:#999;
+    position:relative;
+    margin-bottom:20px;
+}
+
+.divider span{
+    background:#fff;
+    padding:0 10px;
+}
+
+.divider::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:40%;
+    height:1px;
+    background:#ccc;
+}
+
+.divider::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:0;
+    width:40%;
+    height:1px;
+    background:#ccc;
+}
+
+/* social login */
+
+.social-login{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.facebook{
+    color:#1877f2;
+}
+
+.google{
+    color:#ea4335;
+}
+
+.apple{
+    color:#000;
+}
+
+/* register */
+
+.register{
+    text-align:center;
+    font-size:13px;
+}
+
+.register a{
+    color:#ff6a00;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:22px;
+}

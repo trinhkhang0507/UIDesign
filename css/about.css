@@ -1,0 +1,57 @@
+.about-page {
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+/* TITLE */
+.about-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* gạch ngang bên phải */
+.about-title::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 2px;
+  background: #333;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* CONTENT */
+.about-content {
+  display: flex;
+  gap: 40px;
+}
+
+/* COLUMN */
+.about-col {
+  width: 50%;
+}
+
+.about-col h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 5px;
+}
+
+.about-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* LIST */
+.about-col ul {
+  padding-left: 20px;
+}
+
+.about-col li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}

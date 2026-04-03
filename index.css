@@ -1,0 +1,188 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  z-index: 1;
+}
+
+/* FIX CHÍNH Ở ĐÂY */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider img {
+  width: 100%;
+  flex-shrink: 0;   /* 🔥 đảm bảo mỗi ảnh chiếm 100% */
+  height: 600px;
+  object-fit: cover;
+}
+
+/* Nút */
+.banner button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+/* BANNER */
+.banner img {
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+}
+
+/* POLICIES */
+.policies {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.policies div {
+  width: 23%;
+}
+
+.policies div p:first-child {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* TITLE */
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 12px auto;
+    align-items: center;
+    width: 90%;
+}
+
+/* tạo 2 thanh ngang */
+.title::before,
+.title::after {
+  content: "";
+  flex: 1;
+  height: 6px; /* chiều cao tổng */
+  
+  background: linear-gradient(
+    to bottom,
+    #333 0px,
+    #333 1px,
+    transparent 1px,
+    transparent 3px,
+    #333 3px,
+    #333 4px,
+    transparent 4px
+  );
+}
+
+/* khoảng cách giữa line và chữ */
+.title::before {
+  margin-right: 20px;
+}
+
+.title::after {
+  margin-left: 20px;
+}
+
+
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 90%;
+  margin: auto;
+}
+
+.product img {
+  width: 100%;
+  height: auto;        /* thêm để ảnh đều */
+  object-fit: cover;    /* không méo ảnh */
+}
+
+.product span {
+  color: red;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.view-all {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    width: 100%;
+}
+.btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 35px;
+  background: #FF6A00; /* đỏ dịu hơn */
+  color: white;
+  border: none;
+  border-radius: 30px; /* bo góc */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.btn:hover {
+  background: #c62828;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+/* NEWS */
+.news {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 90%;
+  margin: 15px auto;
+}
+
+.news-item {
+  font-weight: bold;
+}
+
+.news-item img {
+  width: 100%;
+}
+
+/* FOOTER */
+.footer {
+  background: #1f2a36;
+  color: white;
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}

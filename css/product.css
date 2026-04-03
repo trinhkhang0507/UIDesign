@@ -1,0 +1,208 @@
+/* PAGE */
+.product-page {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+}
+
+.filter, .filter-color, .filter-size {
+  background: #f5f5f5;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.filter, .filter-color, .filter-size h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.filter label {
+  display: block;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+/* CONTENT */
+.product-content {
+  flex: 1;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.product-header {
+  background: #f5f5f5;
+  padding: 10px;
+
+}
+
+/* GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  margin: auto;
+  
+}
+
+.product {
+  text-align: left;
+  position: relative;
+    overflow: hidden;
+}
+
+.product::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.product:hover::before {
+    opacity: 1;
+}
+
+.product-actions {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    opacity: 0;
+    bottom: 60px;
+    z-index: 3;
+}
+
+/* khi hover */
+.product:hover .product-actions {
+    opacity: 1;
+    bottom: 50%;
+}
+
+/* style button */
+.btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* nút giỏ */
+.btn.cart {
+    background: black;
+    color: white;
+}
+
+/* nút mua */
+.btn.buy {
+    background: red;
+    color: white;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product span {
+  color: red;
+  font-weight: bold;
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    z-index: 1;
+}
+
+.filter-color{
+    display: flex;
+}
+
+.color-option input{
+    display: none;
+}
+
+.color-circle{
+    margin: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+/* màu */
+.white{
+    background: white;
+}
+
+.black{
+    background: black;
+}
+
+.red{
+    background: red;
+}
+
+.pink{
+    background: pink;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.brown{
+    background: brown;
+}
+
+.green{
+    background: green;
+}
+
+.grey{
+    background: grey;
+}
+
+.orange{
+    background: orange;
+}
+
+.blue{
+    background: blue;
+}
+
+.light-blue{
+    background: lightblue;
+}
+
+/* khi chọn */
+.color-option input:checked + .color-circle{
+    border: 1px solid #000;
+    transition: all 0.2s ease  ;
+}
+
+.filter-color {
+    display: block;
+    flex-wrap: wrap;
+}
+
+.size-options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
