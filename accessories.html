@@ -19,50 +19,54 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="filter">
-            <h3>Danh mục sản phẩm</h3>
-            <label><input type="radio" name="product" value="shoes"> Sản phẩm nam</label>
+            <h3 class="filter-title">Danh mục sản phẩm</h3>
+            <div class="filter-content">
+                <label><input type="radio" name="product" value="shoes"> Sản phẩm nam</label>
             <label><input type="radio" name="product" value="slippers"> Sản phẩm nữ</label>
+            </div>  
         </div>
         <div class="filter">
-            <h3>Giá</h3>
-
-            <label>
+            <h3 class="filter-title">Giá</h3>
+            <div class="filter-content">
+                <label>
                 <input type="radio" name="brand" value="1"> Nike
-            </label>
+                </label>
 
-            <label>
-                <input type="radio" name="brand" value="2"> Adidas
-            </label>
+                <label>
+                    <input type="radio" name="brand" value="2"> Adidas
+                </label>
 
-            <label>
-                <input type="radio" name="brand" value="3"> S&B
-            </label>
+                <label>
+                    <input type="radio" name="brand" value="3"> S&B
+                </label>
 
-            <label>
-                <input type="radio" name="brand" value="4"> Crep Protect
-            </label>
+                <label>
+                    <input type="radio" name="brand" value="4"> Crep Protect
+                </label>
 
-            <label>
-                <input type="radio" name="brand" value="5"> Jason Markk
-            </label>
-            <label>
-                <input type="radio" name="brand" value="6"> SUPER PILLS
-            </label>
-            <label>
-                <input type="radio" name="brand" value="7"> Sneaker Zone
-            </label>
-            <label>
-                <input type="radio" name="brand" value="8"> Sneaker Myth
-            </label>
-            <label>
-                <input type="radio" name="brand" value="9"> SHOETREE
-            </label>
+                <label>
+                    <input type="radio" name="brand" value="5"> Jason Markk
+                </label>
+                <label>
+                    <input type="radio" name="brand" value="6"> SUPER PILLS
+                </label>
+                <label>
+                    <input type="radio" name="brand" value="7"> Sneaker Zone
+                </label>
+                <label>
+                    <input type="radio" name="brand" value="8"> Sneaker Myth
+                </label>
+                <label>
+                    <input type="radio" name="brand" value="9"> SHOETREE
+                </label>
+            </div>
+            
 
         </div>
         <div class="filter">
-            <h3>Giá</h3>
-
-            <label>
+            <h3 class="filter-title">Giá</h3>
+            <div class="filter-content">
+                <label>
                 <input type="radio" name="price" value="1"> Nhỏ hơn 500.000đ
             </label>
 
@@ -81,14 +85,16 @@
             <label>
                 <input type="radio" name="price" value="5"> Lớn hơn 4.000.000đ
             </label>
+            </div>
+            
 
         </div>
 
         <div class="filter-color">
             <div>
-                <h3>Màu sắc</h3>
+                <h3 class="filter-title">Màu sắc</h3>
             </div>
-            <div>
+            <div class="filter-content">
                 <label class="color-option">
                     <input type="radio" name="color">
                     <span class="color-circle white"></span>
@@ -144,9 +150,9 @@
         </div>
         <div class="filter-size">
             <div>
-                <h3>Kích thước</h3>
+                <h3 class="filter-title">Kích thước</h3>
             </div>
-            <div class="size-options">
+            <div class="filter-content size-options">
                 <label><input type="radio" name="size" value="small"> S</label>
                 <label><input type="radio" name="size" value="medium"> M</label>
                 <label><input type="radio" name="size" value="large"> L</label>
@@ -166,7 +172,7 @@
         <div class="products">
             <div class="product">
                 <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
+                    <img src="images/10.jpg">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>
@@ -177,7 +183,7 @@
             </div>
             <div class="product">
                 <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
+                    <img src="images/11.jpg">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>
@@ -188,7 +194,7 @@
             </div>
             <div class="product">
                 <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
+                    <img src="images/12.jpg">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>
@@ -199,7 +205,7 @@
             </div>
             <div class="product">
                 <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
+                    <img src="images/13.jpg">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>
@@ -210,7 +216,7 @@
             </div>
             <div class="product">
                 <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
+                    <img src="images/14.jpg">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>
@@ -221,18 +227,7 @@
             </div>
             <div class="product">
                 <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
-                    <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
-                </a>
-                <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
-                </div>
-            </div>
-            <div class="product">
-                <a href="product-detail.html">
-                    <img src="images/slide_index_1.webp">
+                    <img src="images/15.jpg">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>

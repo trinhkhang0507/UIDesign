@@ -76,3 +76,34 @@ h3 {
 .news-small p {
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  .news-page {
+    flex-direction: column;
+  }
+
+  .news-left,
+  .news-right {
+    width: 100%;
+  }
+
+  .news-item-big {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-item-big img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-small {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-small img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -71,3 +71,14 @@
 .social a:hover {
   background: #FF6A00;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

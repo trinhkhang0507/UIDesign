@@ -1,15 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     fetch("components/header.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
+.then(res => res.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+    const closeMenu = document.querySelector(".close-menu");
+
+    if(menuToggle){
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.add("active");
         });
+    }
+
+    if(closeMenu){
+        closeMenu.addEventListener("click", () => {
+            navbar.classList.remove("active");
+        });
+    }
+
+});
 
     fetch("components/footer.html")
         .then(res => res.text())
         .then(data => {
             document.getElementById("footer").innerHTML = data;
         });
+
 });
 
 const slider = document.querySelector(".slider");
@@ -77,5 +96,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   }
+
+});
+
+const filterTitles = document.querySelectorAll(".filter-title");
+
+filterTitles.forEach(title => {
+
+    title.addEventListener("click", () => {
+
+        title.classList.toggle("active");
+
+        const content = title.nextElementSibling;
+
+        content.classList.toggle("show");
+
+    });
 
 });

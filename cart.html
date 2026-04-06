@@ -3,18 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/footer.css">
-    <title>Cart</title>
+    <title>Checkout</title>
 </head>
 <body>
     <div id="header"></div>
-    <div class="container cart-page">
-        <h1>Giỏ hàng của bạn</h1>
-        <p>Không có sản phẩm nào trong giỏ hàng!</p>
-        <a href="/product.html">Tiếp tục mua hàng</a>
+    <div class="checkout-page">
+
+    <!-- LEFT: CART -->
+    <div class="checkout-left">
+
+        <h2>Tóm tắt đơn hàng</h2>
+
+        <div class="cart-item">
+
+            <img src="images/1.png" alt="">
+
+            <div class="item-info">
+                <h4>abc</h4>
+                <a href="#">Xoá</a> |
+                <a href="#">Save for Later</a>
+            </div>
+
+            <div class="item-price">
+                400.000 đ
+            </div>
+
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+
+        </div>
+
     </div>
+
+
+    <!-- RIGHT: SUMMARY -->
+    <div class="checkout-right">
+
+        <div class="summary-box">
+
+            <div class="summary-row">
+                <span>Thành tiền</span>
+                <span>400.000 đ</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Thuế GTGT 10%</span>
+                <span>40.000 đ</span>
+            </div>
+
+            <div class="summary-row total">
+                <span>Tổng</span>
+                <span>440.000 đ</span>
+            </div>
+
+            <div class="coupon">
+                <input type="text" placeholder="Thẻ quà tặng hoặc mã giảm giá">
+                <button>Áp dụng</button>
+            </div>
+
+            <a href="checkout-success.html" class="checkout-btn">
+                Thanh toán
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
     <div id="footer"></div>
     <script src="index.js"></script>
 </body>
