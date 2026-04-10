@@ -14,20 +14,25 @@
 
 <div id="header"></div>
 
-<main class="container product-page">
+<main class="container product-page" data-listing-type="shoes">
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="filter">
             <h3 class="filter-title">Danh mục sản phẩm</h3>
             <div class="filter-content">
+                <label><input type="radio" name="product" value="all" checked> Tất cả</label>
                 <label><input type="radio" name="product" value="shoes"> Giày</label>
-            <label><input type="radio" name="product" value="slippers"> Dép</label>
+                <label><input type="radio" name="product" value="slippers"> Dép</label>
             </div>
         </div>
         <div class="filter">
             <h3 class="filter-title">Giá</h3>
             <div class="filter-content">
+                <label>
+                    <input type="radio" name="price" value="all" checked> Tất cả
+                </label>
+
                 <label>
                     <input type="radio" name="price" value="1"> Nhỏ hơn 500.000đ
                 </label>
@@ -57,55 +62,56 @@
                 <h3 class="filter-title">Màu sắc</h3>
             </div>
             <div class="filter-content">
+                <label class="color-filter-all"><input type="radio" name="color" value="all" checked> Tất cả</label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="white">
                     <span class="color-circle white"></span>
                 </label>
 
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="black">
                     <span class="color-circle black"></span>
                 </label>
 
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="red">
                     <span class="color-circle red"></span>
                 </label>
 
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="pink">
                     <span class="color-circle pink"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="purple">
                     <span class="color-circle purple"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="light-blue">
                     <span class="color-circle light-blue"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="blue">
                     <span class="color-circle blue"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="green">
                     <span class="color-circle green"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="orange">
                     <span class="color-circle orange"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="grey">
                     <span class="color-circle grey"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="brown">
                     <span class="color-circle brown"></span>
                 </label>
                 <label class="color-option">
-                    <input type="radio" name="color">
+                    <input type="radio" name="color" value="yellow">
                     <span class="color-circle yellow"></span>
                 </label>
             </div>  
@@ -115,20 +121,21 @@
                 <h3 class="filter-title">Kích thước</h3>
             </div>
             <div class="filter-content size-options">
-                <label><input type="radio" name="size" value="small"> 35</label>
-                <label><input type="radio" name="size" value="small"> 36</label>
-                <label><input type="radio" name="size" value="small"> 37</label>
-                <label><input type="radio" name="size" value="small"> 38</label>
-                <label><input type="radio" name="size" value="small"> 39</label>
-                <label><input type="radio" name="size" value="medium"> 40</label>
-                <label><input type="radio" name="size" value="medium"> 41</label>
-                <label><input type="radio" name="size" value="medium"> 42</label>
-                <label><input type="radio" name="size" value="medium"> 43</label>
-                <label><input type="radio" name="size" value="large"> 44</label>
-                <label><input type="radio" name="size" value="large"> 45</label>
-                <label><input type="radio" name="size" value="large"> 46</label>
-                <label><input type="radio" name="size" value="large"> 47</label>
-                <label><input type="radio" name="size" value="large"> 48</label>
+                <label class="size-option-all"><input type="radio" name="size" value="all" checked> Tất cả</label>
+                <label><input type="radio" name="size" value="35"> 35</label>
+                <label><input type="radio" name="size" value="36"> 36</label>
+                <label><input type="radio" name="size" value="37"> 37</label>
+                <label><input type="radio" name="size" value="38"> 38</label>
+                <label><input type="radio" name="size" value="39"> 39</label>
+                <label><input type="radio" name="size" value="40"> 40</label>
+                <label><input type="radio" name="size" value="41"> 41</label>
+                <label><input type="radio" name="size" value="42"> 42</label>
+                <label><input type="radio" name="size" value="43"> 43</label>
+                <label><input type="radio" name="size" value="44"> 44</label>
+                <label><input type="radio" name="size" value="45"> 45</label>
+                <label><input type="radio" name="size" value="46"> 46</label>
+                <label><input type="radio" name="size" value="47"> 47</label>
+                <label><input type="radio" name="size" value="48"> 48</label>
             </div>
             
         </div>
@@ -137,86 +144,93 @@
     <!-- PRODUCT -->
     <div class="product-content">
         <div class="product-header">
-            <h3>Tất cả sản phẩm</h3>
+            <div class="product-header-titles">
+                <h3>Tất cả sản phẩm</h3>
+                <p class="product-list-count" aria-live="polite"></p>
+            </div>
+            <label class="product-search-wrap">
+                <span class="visually-hidden">Tìm theo tên sản phẩm</span>
+                <input type="search" class="product-search" placeholder="Tìm theo tên sản phẩm..." autocomplete="off">
+            </label>
         </div>
 
         <div class="products">
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="slippers" data-price="2800000" data-color="black" data-size="42">
+                <a href="product-detail.html?id=shoe-1">
                     <img src="images/1.png">
                     <p>Adidas Yeezy Slide Slate</p>
                     <span>2.800.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
             
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="shoes" data-price="350000" data-color="white" data-size="37">
+                <a href="product-detail.html?id=shoe-2">
                     <img src="images/2.png">
                     <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
+                    <span>350.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="shoes" data-price="1200000" data-color="red" data-size="40">
+                <a href="product-detail.html?id=shoe-3">
                     <img src="images/3.png">
                     <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
+                    <span>1.200.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="slippers" data-price="3200000" data-color="blue" data-size="43">
+                <a href="product-detail.html?id=shoe-4">
                     <img src="images/4.png">
                     <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
+                    <span>3.200.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="shoes" data-price="4500000" data-color="orange" data-size="39">
+                <a href="product-detail.html?id=shoe-5">
                     <img src="images/5.png">
                     <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
+                    <span>4.500.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="slippers" data-price="550000" data-color="green" data-size="44">
+                <a href="product-detail.html?id=shoe-6">
                     <img src="images/6.png">
                     <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
+                    <span>550.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
-            <div class="product">
-                <a href="product-detail.html">
+            <div class="product" data-category="shoes" data-price="3800000" data-color="grey" data-size="36">
+                <a href="product-detail.html?id=shoe-7">
                     <img src="images/7.png">
                     <p>Adidas Yeezy Slide Slate</p>
-                    <span>2.800.000đ</span>
+                    <span>3.800.000đ</span>
                 </a>
                 <div class="product-actions">
-                    <button class="btn cart">Thêm vào giỏ</button>
-                    <button class="btn buy">Mua ngay</button>
+                    <button type="button" class="btn cart">Thêm vào giỏ</button>
+                    <button type="button" class="btn buy">Mua ngay</button>
                 </div>
             </div>
         </div>

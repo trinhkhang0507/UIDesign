@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,76 +7,62 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/footer.css">
-    <title>Checkout</title>
+    <title>Giỏ hàng</title>
 </head>
 <body>
     <div id="header"></div>
     <div class="checkout-page">
 
-    <!-- LEFT: CART -->
-    <div class="checkout-left">
+        <!-- LEFT: CART -->
+        <div class="checkout-left">
+            <h2 class="cart-page-title">Giỏ hàng của bạn</h2>
+            <p class="cart-page-sub">Xem lại sản phẩm và chỉnh số lượng trước khi thanh toán.</p>
 
-        <h2>Tóm tắt đơn hàng</h2>
+            <div id="cart-items" class="cart-items"></div>
+        </div>
 
-        <div class="cart-item">
+        <!-- RIGHT: SUMMARY -->
+        <div class="checkout-right">
+            <div class="summary-box">
+                <h3 class="summary-heading">Tóm tắt đơn hàng</h3>
 
-            <img src="images/1.png" alt="">
+                <div class="summary-row">
+                    <span>Thành tiền</span>
+                    <span id="cart-subtotal">0 đ</span>
+                </div>
 
-            <div class="item-info">
-                <h4>abc</h4>
-                <a href="#">Xoá</a> |
-                <a href="#">Save for Later</a>
+                <div class="summary-row cart-discount-row" id="cart-discount-row" hidden>
+                    <span>Giảm giá (voucher)</span>
+                    <span id="cart-discount" class="cart-discount-value">0 đ</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Thuế GTGT 10%</span>
+                    <span id="cart-tax">0 đ</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row total">
+                    <span>Tổng cộng</span>
+                    <span id="cart-total">0 đ</span>
+                </div>
+
+                <div class="coupon">
+                    <input type="text" id="cart-coupon-input" placeholder="Nhập mã voucher" autocomplete="off" maxlength="20">
+                    <button type="button" class="coupon-btn" id="cart-coupon-apply">Áp dụng</button>
+                </div>
+                <p class="cart-coupon-message" id="cart-coupon-message" role="status"></p>
+
+                <a href="checkout-success.html" class="checkout-btn">
+                    Thanh toán
+                </a>
+
+                <a href="product.html" class="continue-shopping">← Tiếp tục mua sắm</a>
             </div>
-
-            <div class="item-price">
-                400.000 đ
-            </div>
-
-            <div class="quantity">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-
         </div>
 
     </div>
-
-
-    <!-- RIGHT: SUMMARY -->
-    <div class="checkout-right">
-
-        <div class="summary-box">
-
-            <div class="summary-row">
-                <span>Thành tiền</span>
-                <span>400.000 đ</span>
-            </div>
-
-            <div class="summary-row">
-                <span>Thuế GTGT 10%</span>
-                <span>40.000 đ</span>
-            </div>
-
-            <div class="summary-row total">
-                <span>Tổng</span>
-                <span>440.000 đ</span>
-            </div>
-
-            <div class="coupon">
-                <input type="text" placeholder="Thẻ quà tặng hoặc mã giảm giá">
-                <button>Áp dụng</button>
-            </div>
-
-            <a href="checkout-success.html" class="checkout-btn">
-                Thanh toán
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
     <div id="footer"></div>
     <script src="index.js"></script>
 </body>

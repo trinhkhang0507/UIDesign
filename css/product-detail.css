@@ -1,11 +1,17 @@
-/* PRODUCT DETAIL */
-.product-detail {
+/* Override footer.css .container (space-between + wrap) — khối này cũng dùng class container */
+.container.product-detail {
     display: flex;
-    gap: 40px;       /* khoảng cách giữa ảnh và info */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: flex-start;
+    gap: 40px;
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
+    width: 90%;
+    box-sizing: border-box;
+    margin-bottom: 48px;
 }
 
 /* LEFT */
@@ -15,8 +21,13 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    flex:1.5;
-    height: 500px;
+    flex: 1.5 1 0;
+    min-width: 0;
+    width: 100%;
+    max-width: min(480px, 100%);
+    aspect-ratio: 1;
+    overflow: hidden;
+    align-self: flex-start;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -27,14 +38,18 @@
 .product-images img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border: 1px solid #eee;
   object-fit: cover;
+  display: block;
 }
 
 /* RIGHT */
 .product-info {
-  width: 50%;
-  flex:1;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .product-info h2 {
@@ -49,6 +64,77 @@
   margin-bottom: 10px;
 }
 
+/* Màu (chỉ hiện với sản phẩm giày/dép — JS bỏ hidden) */
+.product-detail-colors {
+  margin-bottom: 14px;
+}
+
+.detail-colors-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.detail-colors-row > p {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.product-detail-color-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-color-option {
+  cursor: pointer;
+  margin: 0;
+}
+
+.detail-color-option input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.detail-color-option .color-circle {
+  margin: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+.detail-color-option input:focus-visible + .color-circle {
+  outline: 2px solid #D71D28;
+  outline-offset: 2px;
+}
+
+.detail-color-option input:checked + .color-circle {
+  border-color: #D71D28;
+  box-shadow: 0 0 0 1px #fff inset;
+}
+
+.product-detail-color-box .white { background: #fff; }
+.product-detail-color-box .black { background: #111; }
+.product-detail-color-box .red { background: #e74c3c; }
+.product-detail-color-box .pink { background: #ffb6c1; }
+.product-detail-color-box .purple { background: #9b59b6; }
+.product-detail-color-box .light-blue { background: #87ceeb; }
+.product-detail-color-box .blue { background: #2980b9; }
+.product-detail-color-box .green { background: #27ae60; }
+.product-detail-color-box .orange { background: #e67e22; }
+.product-detail-color-box .grey { background: #7f8c8d; }
+.product-detail-color-box .brown { background: #6d4c41; }
+.product-detail-color-box .yellow { background: #f1c40f; }
+
 .desc {
   font-size: 14px;
   margin: 10px 0;
@@ -60,8 +146,12 @@
 }
 
 .size-box {
-    width: auto;
-    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
     margin: 0 10px;
 }
 
@@ -76,6 +166,12 @@
 .sizes button:hover {
   border-color: red;
   color: red;
+}
+
+.sizes button.is-selected {
+  border-color: #D71D28;
+  color: #D71D28;
+  font-weight: 600;
 }
 
 /* QUANTITY */
@@ -131,19 +227,17 @@
 }
 
 @media (max-width: 768px) {
-    .product-detail {
+    .container.product-detail {
         flex-direction: column;
+        flex-wrap: wrap;
     }
-    
+
     .product-images {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        height: auto;
+        max-width: 100%;
+        width: 100%;
+        aspect-ratio: 1;
     }
-    
+
     .product-info {
         width: 100%;
         margin-top: 20px;

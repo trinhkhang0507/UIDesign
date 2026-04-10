@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Mua nhanh — 1 sản phẩm</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="checkout-page buy-now-page">
+
+        <div class="checkout-left">
+            <h2 class="cart-page-title">Mua nhanh</h2>
+            <p class="cart-page-sub">Trang này chỉ hiển thị <strong>một sản phẩm</strong> bạn vừa chọn (Mua ngay), không gộp với giỏ hàng đầy đủ.</p>
+
+            <div id="buy-now-items" class="cart-items"></div>
+        </div>
+
+        <div class="checkout-right">
+            <div class="summary-box">
+                <h3 class="summary-heading">Tóm tắt</h3>
+
+                <div class="summary-row">
+                    <span>Thành tiền</span>
+                    <span id="buy-now-subtotal">0 đ</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Thuế GTGT 10%</span>
+                    <span id="buy-now-tax">0 đ</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row total">
+                    <span>Tổng cộng</span>
+                    <span id="buy-now-total">0 đ</span>
+                </div>
+
+                <a href="checkout-success.html" class="checkout-btn" id="buy-now-pay">Thanh toán</a>
+
+                <button type="button" class="buy-now-secondary-btn" id="buy-now-add-cart">Thêm vào giỏ hàng</button>
+
+                <a href="product.html" class="continue-shopping">← Quay lại danh sách sản phẩm</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer"></div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/product-detail.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -14,29 +15,29 @@
 
     <!-- LEFT: IMAGE -->
         <div class="product-images">
-            <img class="div1" src="images/slide_index_1.webp">
-            <!-- <div class="thumbs"> -->
-            <img class="div2" src="images/slide_index_1.webp">
-            <img class="div3" src="images/slide_index_2.webp">
-            <img class="div4" src="images/slide_index_3.webp">
-            <!-- </div> -->
+            <img class="div1" src="images/slide_index_1.webp" alt="">
+            <img class="div2" src="images/slide_index_1.webp" alt="">
+            <img class="div3" src="images/slide_index_2.webp" alt="">
+            <img class="div4" src="images/slide_index_3.webp" alt="">
         </div>
 
         <!-- RIGHT: INFO -->
         <div class="product-info">
-            <h2>Adidas Yeezy Slide Slate</h2>
-            <p><strong>Mã sản phẩm</strong></p>
-            <p class="price">2.800.000đ</p>
+            <h2 class="product-detail-title">Đang tải…</h2>
+            <p class="product-detail-sku-line"><strong>Mã sản phẩm:</strong> <span class="product-detail-sku">—</span></p>
+            <p class="price product-detail-price"></p>
+
+            <div class="product-detail-colors" hidden>
+                <div class="detail-colors-row">
+                    <p>Màu sắc:</p>
+                    <div class="product-detail-color-box" role="group" aria-label="Chọn màu"></div>
+                </div>
+            </div>
 
             <!-- SIZE -->
             <div class="sizes">
                 <p>Kích thước:</p>
-                <div class="size-box">
-                    <button>38</button>
-                    <button>39</button>
-                    <button>40</button>
-                    <button>41</button>
-                </div>
+                <div class="size-box"></div>
             </div>
 
             <!-- QUANTITY -->
@@ -51,11 +52,12 @@
 
             <!-- BUTTON -->
             <div class="actions">
-                <button class="btn"><i class="fa-solid fa-cart-shopping"></i>Thêm vào giỏ</button>
-                <button class="btn-outline"><i class="fa-solid fa-check"></i>Mua ngay</button>
+                <button type="button" class="btn product-detail-add-cart"><i class="fa-solid fa-cart-shopping"></i>Thêm vào giỏ</button>
+                <button type="button" class="btn-outline product-detail-buy"><i class="fa-solid fa-check"></i>Mua ngay</button>
             </div>
-            <div class="actions">
-                <strong class="desc">Mô tả sản phẩm:</strong>
+            <div class="actions product-detail-desc-wrap">
+                <strong class="desc">Mô tả sản phẩm</strong>
+                <p class="product-detail-desc"></p>
             </div>
         </div>
 
